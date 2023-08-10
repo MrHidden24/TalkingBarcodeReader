@@ -13,6 +13,6 @@ if ($result){
 		'desc' => $desc
 	));
 } else {
-	echo json_encode(array('errorMsg'=>'Some errors occured.'));
+	echo json_encode(array('errorMsg'=>'Some errors occured.111'));
 }
 ?>

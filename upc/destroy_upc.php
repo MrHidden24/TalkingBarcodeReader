@@ -1,10 +1,10 @@
 <?php
 
-$upc = intval($_REQUEST['upc']);
+//$upc = intval($_REQUEST['upc']);
+$upc = htmlspecialchars($_REQUEST['upc']);
 
 include 'conn.php';
-
-$sql = "delete from upcdata where upc=$upc";
+$sql = "delete from upcdata where upc=('$upc')";
 $result = $db->exec($sql);
 if ($result){
 	echo json_encode(array('success'=>true));

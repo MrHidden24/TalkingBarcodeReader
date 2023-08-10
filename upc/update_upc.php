@@ -4,8 +4,8 @@ $upc = htmlspecialchars($_REQUEST['upc']);
 $desc = htmlspecialchars($_REQUEST['desc']);
 
 include 'conn.php';
-
-$sql = "update upcdata set upc='$upc',desc='$desc' where upc=$upc";
+//$sql = "insert into upcdata(upc,desc) values('$upc','$desc')";
+$sql = "update upcdata set upc=('$upc'),desc=('$desc') where upc=('$upc')";
 $result = $db->exec($sql);
 if ($result){
 	echo json_encode(array(
@@ -13,6 +13,6 @@ if ($result){
 		'desc' => $desc
 	));
 } else {
-	echo json_encode(array('errorMsg'=>'Some errors occured.'));
+	echo json_encode(array('errorMsg'=>'Some errors occured.222'));
 }
 ?>
