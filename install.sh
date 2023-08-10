@@ -11,6 +11,7 @@ echo "INSTALLING DEPENDENCIES..."
 sudo apt-get -y install lighttpd
 sudo apt-get -y install sqlite3
 sudo apt-get -y install flite
+sudo apt-get -y install espeak
 sudo apt-get -y install php7.0 php7.0-common php7.0-cgi php7.0-sqlite
 
 #Configure webserver options for PHP
