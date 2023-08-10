@@ -157,7 +157,7 @@ if __name__ == '__main__':
     if DEBUG:
         print((str(upc)+"="+str(desc)))
     #espeak -ven+f2 -k5 -s175 -a50 -g10 (desc)
-    speak(desc)
+   
     #fp.close()
 
 
@@ -167,7 +167,7 @@ if __name__ == '__main__':
     my_lcd = lcd()
     my_lcd.display_string(line1, 1)
     my_lcd.display_string(line2, 2)
-
+    speak(desc)
     fp.close()
          
   # END REPEAT LOOP
